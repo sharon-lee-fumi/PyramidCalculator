@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/titleLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/title_label"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/polygonLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/polygon_label"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBaseline_toBaselineOf="@+id/baseNSpinner"
+        app:layout_constraintStart_toStartOf="@+id/titleLabel" />
+
+    <Spinner
+        android:id="@+id/baseNSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:entries="@array/polygon_array"
+        app:layout_constraintEnd_toEndOf="@+id/titleLabel"
+        app:layout_constraintTop_toBottomOf="@+id/titleLabel" />
+
+    <TextView
+        android:id="@+id/baseSideLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/base_side_label"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBaseline_toBaselineOf="@+id/baseSideEditText"
+        app:layout_constraintStart_toStartOf="@+id/polygonLabel" />
+
+    <EditText
+        android:id="@+id/baseSideEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:ems="6"
+        android:inputType="numberDecimal"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintEnd_toEndOf="@+id/baseNSpinner"
+        app:layout_constraintTop_toBottomOf="@+id/baseNSpinner" />
+
+    <TextView
+        android:id="@+id/heightLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/height_label"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBaseline_toBaselineOf="@+id/heightEditText"
+        app:layout_constraintStart_toStartOf="@+id/baseSideLabel" />
+
+    <EditText
+        android:id="@+id/heightEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:ems="6"
+        android:inputType="numberDecimal"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintEnd_toEndOf="@+id/baseSideEditText"
+        app:layout_constraintTop_toBottomOf="@+id/baseSideEditText" />
+
+
+    <TextView
+        android:id="@+id/decimalsLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+
+        android:text="@string/decimal_label"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBaseline_toBaselineOf="@+id/polygonLabel"
+        app:layout_constraintStart_toEndOf="@+id/baseNSpinner" />
+
+    <RadioGroup
+        android:id="@+id/decimalRadioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical"
+        android:padding="10dp"
+        app:layout_constraintStart_toStartOf="@+id/decimalsLabel"
+        app:layout_constraintTop_toBottomOf="@+id/decimalsLabel">
+
+        <RadioButton
+            android:id="@+id/decimal_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/decimal_1"
+            android:textAppearance="@android:style/TextAppearance.Material.Large" />
+
+        <RadioButton
+            android:id="@+id/decimal_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/decimal_3"
+            android:textAppearance="@android:style/TextAppearance.Material.Large" />
+
+    </RadioGroup>
+
+
+    <Button
+        android:id="@+id/calculateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:onClick="calculate"
+        android:text="@string/calculate_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/decimalRadioGroup"
+        app:layout_constraintTop_toBottomOf="@+id/decimalRadioGroup" />
+
+
+
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Pyramid Calculator</string>
+
+    <string name="title_label">Input Pyramid Data</string>
+    <string name="calculation_label">Pyramid Calculation</string>
+    <string name="polygon_label">Polygon</string>
+
+    <string-array name="polygon_array">
+        <item>Triangle (N=3)</item>
+        <item>Square (N=4)</item>
+        <item>Pentagon (N=5)</item>
+        <item>Hexagon (N=6)</item>
+    </string-array>
+
+    <string name="base_side_label">Base Side</string>
+    <string name="height_label">Height</string>
+
+    <string name="decimal_label">Decimals</string>
+    <string name="decimal_1">1 decimal</string>
+    <string name="decimal_3">3 decimals</string>
+
+    <string name="calculate_button">Calculate</string>
+
+    <string name="base_area_label">Base Area</string>
+    <string name="volume_label">Volume</string>
+    <string name="back_button">Back</string>
+
+    <string name="invalid_input">Please fill out all fields to calculate</string>
+</resources>
